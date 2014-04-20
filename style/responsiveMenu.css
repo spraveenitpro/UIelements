@@ -87,8 +87,9 @@ section h1 {
 
 section p {
   margin-bottom: 30px; }
-  section p:last-child {
-    margin-bottom: 0; }
+  
+section p:last-child {
+  margin-bottom: 0; }
 
 /* =Media Queries
 -------------------------------------------------------------- */
