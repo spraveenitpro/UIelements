@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pull More</title>
+    <style>
+        
+        li {
+            list-style-image:url(starsolid.gif);
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Jquery Pull More</h1>
+    <ul id="results">
+    <li class="librarypaginate"><h5><a href="http://google.com">data 1</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 2</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 3</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 4</a></h5></li>    
+    <li class="librarypaginate"><h5><a href="http://google.com">data 5</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 6</a></h5></li>    
+    <li class="librarypaginate"><h5><a href="http://google.com">data 7</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 8</a></h5></li>    
+    <li class="librarypaginate"><h5><a href="http://google.com">data 9</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 10</a></h5></li>    
+    <li class="librarypaginate"><h5><a href="http://google.com">data 11</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 12</a></h5></li>    
+    <li class="librarypaginate"><h5><a href="http://google.com">data 13</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 14</a></h5></li>    
+    <li class="librarypaginate"><h5><a href="http://google.com">data 15</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 16</a></h5></li>    
+    <li class="librarypaginate"><h5><a href="http://google.com">data 17</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 18</a></h5></li>    
+    <li class="librarypaginate"><h5><a href="http://google.com">data 19</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 20</a></h5></li>    
+    <li class="librarypaginate"><h5><a href="http://google.com">data 21</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 22</a></h5></li>    
+    <li class="librarypaginate"><h5><a href="http://google.com">data 23</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 24</a></h5></li>    
+    <li class="librarypaginate"><h5><a href="http://google.com">data 25</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 26</a></h5></li>    
+    <li class="librarypaginate"><h5><a href="http://google.com">data 27</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 28</a></h5></li>    
+    <li class="librarypaginate"><h5><a href="http://google.com">data 29</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 30</a></h5></li>
+    <li class="librarypaginate"><h5><a href="http://google.com">data 31</a></h5></li>
+</ul>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+        $('.librarypaginate:gt(4)').hide().last().after(
+                 $('<a />').attr('href','#').text('Pull more').click(function(){
+                 var a = this;
+                 $('.librarypaginate:not(:visible):lt(3)').fadeIn(function(){
+                 if ($('.librarypaginate:not(:visible)').length == 0) $(a).remove();   
+                 }); return false;
+             })
+        );
+    </script>
+</body>
+</html>
